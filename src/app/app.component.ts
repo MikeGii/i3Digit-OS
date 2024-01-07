@@ -78,10 +78,12 @@ export class AppComponent implements OnInit {
   deleteFilament(filament: Filament): void {
     this.appState$ = this.filamentService.delete$(filament.id)
       .pipe(
-        map( response => {
+        map(response => {
           this.dataSubject.next(
-            { ...response, data: 
-              { filaments: this.dataSubject.value.data.filaments.filter(f => f.id !== filament.id)} }
+            {
+              ...response, data:
+                { filaments: this.dataSubject.value.data.filaments.filter(f => f.id !== filament.id) }
+            }
           );
           return { dataState: DataState.LOADED_STATE, appData: this.dataSubject.value }
         }),
@@ -90,7 +92,22 @@ export class AppComponent implements OnInit {
           return of({ dataState: DataState.ERROR_STATE, error });
         })
       );
+  }
 
+  printpdfReport(): void {
+    window.print();
+  }
+
+  printReport(): void {
+    let dataType = 'application/vnd.ms-excel.sheet.macroEnabled.12';
+    let tableSelect = document.getElementById('filaments');
+    let tableHtml = tableSelect.outerHTML.replace(/ /g, '%20');
+    let downloadLink = document.createElement('a');
+    document.body.appendChild(downloadLink);
+    downloadLink.href = 'data:' + dataType + ', ' + tableHtml;
+    downloadLink.download = 'filament-report.xls';
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
   }
 
 }

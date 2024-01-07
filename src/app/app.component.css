@@ -50,9 +50,17 @@ body {
 }
 
 .btn.btn-primary,
+.btn.btn-secondary,
 .btn.btn-success,
 .btn.btn-info {
     background: #603A23;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-secondary:hover,
+.btn.btn-success:hover,
+.btn.btn-info:hover {
+    background: #976f55;
 }
 
 .badge.badge-danger {
