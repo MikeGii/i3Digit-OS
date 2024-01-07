@@ -33,7 +33,7 @@
                     </div>
                 </ng-container>
                 <ng-container *ngSwitchCase="DataState.LOADED_STATE">
-                    <table class="table table-striped table-hover" id="servers">
+                    <table class="table table-striped table-hover" id="filaments">
                         <thead>
                             <tr>
                                 <th>Image</th>
@@ -43,6 +43,7 @@
                                 <th>Producer</th>
                                 <th>Price (€)</th>
                                 <th>Status</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody *ngFor="let filament of appState.appData.data.filaments; let i = index" >
@@ -60,7 +61,7 @@
                                     </span>
                                 </td>
                                 <td>
-                                    <a class="delete" data-toggle="modal"
+                                    <a (click)="deleteFilament(filament)" class="delete" data-toggle="modal"
                                         style="cursor: pointer;"><i class="material-icons" data-toggle="tooltip"
                                             title="Delete">&#xE872;</i></a>
                                 </td>

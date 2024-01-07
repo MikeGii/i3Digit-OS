@@ -75,4 +75,22 @@ export class AppComponent implements OnInit {
       );
   }
 
+  deleteFilament(filament: Filament): void {
+    this.appState$ = this.filamentService.delete$(filament.id)
+      .pipe(
+        map( response => {
+          this.dataSubject.next(
+            { ...response, data: 
+              { filaments: this.dataSubject.value.data.filaments.filter(f => f.id !== filament.id)} }
+          );
+          return { dataState: DataState.LOADED_STATE, appData: this.dataSubject.value }
+        }),
+        startWith({ dataState: DataState.LOADING_STATE, appData: this.dataSubject.value }),
+        catchError((error: string) => {
+          return of({ dataState: DataState.ERROR_STATE, error });
+        })
+      );
+
+  }
+
 }
