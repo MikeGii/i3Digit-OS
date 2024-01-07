@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import static java.time.LocalDateTime.now;
 import static java.util.Map.of;
@@ -29,7 +30,8 @@ public class FilamentResource {
     private final FilamentServiceImplementation filamentService;
 
     @GetMapping("/list")
-    public ResponseEntity<Response> getFilaments(){
+    public ResponseEntity<Response> getFilaments() throws InterruptedException {
+        TimeUnit.SECONDS.sleep((long)1.5);
         return ResponseEntity.ok(
                 Response.builder()
                         .timeStamp(now())
