@@ -16,7 +16,7 @@
                         </a>
   
                         <span>
-                            <select name="status"
+                            <select (ngModelChange)="filterFilaments($event)" ngModel="ALL" name="status"
                                 class="btn btn-info" style="height: 32.91px;">
                                 <option value="ALL">ALL</option>
                                 <option value="FILAMENT_AVAILABLE">AVAILABLE</option>
