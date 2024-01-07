@@ -4,7 +4,7 @@ import { Observable, catchError, map, of, startWith } from 'rxjs';
 import { AppState } from './interface/app-state';
 import { CustomResponse } from './interface/custom-response';
 import { DataState } from './enum/data-state.enum';
-import { CommonModule } from '@angular/common';
+import { Status } from './enum/status.enum';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,9 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   appState$: Observable<AppState<CustomResponse>>;
+  readonly DataState = DataState;
+  readonly Status = Status;
+
   constructor(private filamentService: FilamentService) { }
 
   ngOnInit(): void {
