@@ -19,7 +19,7 @@ body {
 
 .table-title {
     padding-bottom: 15px;
-    background: #074c68;
+    background: #C89773;
     color: #fff;
     padding: 16px 30px;
     min-width: 100%;
@@ -28,6 +28,7 @@ body {
 }
 
 .table-title h2 {
+    color: #603A23;
     margin: 5px 0 0;
     font-size: 24px;
 }
@@ -37,7 +38,7 @@ body {
 }
 
 .table-title .btn {
-    color: #fff;
+    color: #F1DFBC;
     float: right;
     font-size: 13px;
     border: none;
@@ -46,6 +47,20 @@ body {
     border: none;
     outline: none !important;
     margin-left: 10px;
+}
+
+.btn.btn-primary,
+.btn.btn-success,
+.btn.btn-info {
+    background: #603A23;
+}
+
+.badge.badge-danger {
+    color: #f00;
+}
+
+.badge.badge-success {
+    color: #059641;
 }
 
 .table-title .btn i {
@@ -193,7 +208,7 @@ table.table .avatar {
     display: inline-block;
     vertical-align: text-top;
     background: white;
-    border: 1px solid #bbb;
+    border: 1px solid #603A23;
     border-radius: 2px;
     box-sizing: border-box;
     z-index: 2;
@@ -206,7 +221,7 @@ table.table .avatar {
     top: 3px;
     width: 6px;
     height: 11px;
-    border: solid #000;
+    border: solid #603A23;
     border-width: 0 3px 3px 0;
     transform: inherit;
     z-index: 3;
@@ -214,7 +229,7 @@ table.table .avatar {
 }
 
 .custom-checkbox input[type="checkbox"]:checked+label:before {
-    border-color: #03A9F4;
+    border-color: #603A23;
     background: #03A9F4;
 }
 
@@ -257,7 +272,7 @@ table.table .avatar {
 .modal .form-control {
     border-radius: 2px;
     box-shadow: none;
-    border-color: #dddddd;
+    border-color: #603A23;
 }
 
 .modal textarea.form-control {

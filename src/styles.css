@@ -3,7 +3,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
 
 body{
-    background: #faf4df;
+    background: #F1DFBC;
     margin-top:20px;
 }
 .card {
@@ -12,7 +12,7 @@ body{
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #ffffff;
+    background-color: #F1DFBC;
     background-clip: border-box;
     border: 0 solid transparent;
     border-radius: 0;
