@@ -263,18 +263,25 @@ table.table .avatar {
     padding: 20px 30px;
 }
 
+
 .modal .modal-content {
     border-radius: 3px;
     font-size: 14px;
+    background-color: #603A23;
+}
+
+.modal .modal-body {
+    background-color: #F1DFBC;
 }
 
 .modal .modal-footer {
-    background: #ecf0f1;
+    background-color: #C89773;
     border-radius: 0 0 3px 3px;
 }
 
 .modal .modal-title {
     display: inline-block;
+    color: #F1DFBC;
 }
 
 .modal .form-control {
@@ -290,6 +297,23 @@ table.table .avatar {
 .modal .btn {
     border-radius: 2px;
     min-width: 100px;
+}
+
+.modal .btn.btn-warning,
+.modal .btn.btn-success {
+    background: #603A23;
+    color: #F1DFBC;
+    border-color: #603A23;
+}
+
+.modal .btn.btn-warning:hover,
+.modal .btn.btn-success:hover {
+    background: #976f55;
+    border-color: #976f55;
+}
+
+.modal .close {
+    background-color: #F1DFBC;
 }
 
 .modal form label {
