@@ -5,23 +5,23 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-                        <h2>Manage Filaments</h2>
+                        <img src="assets/image_logo.png" alt="i3Digit Logo" class="imageLogo">
+                        <h2>Filament Manager</h2>
                     </div>
                     <div class="col-sm-6">
                         <button (click)="printReport()" type="button" class="btn btn-primary">XLS</button>
                         <button (click)="printpdfReport()" type="button" class="btn btn-secondary">Print</button>
   
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
-                            <i class="material-icons">&#xE147;</i>
                             <span>New Filament</span>
                         </a>
   
                         <span>
                             <select (ngModelChange)="filterFilaments($event)" ngModel="ALL" name="status"
-                                class="btn btn-info" style="height: 32.91px;">
-                                <option value="ALL">ALL</option>
+                                class="btn btn-info">
+                                <option value="ALL">ALL FILAMENTS</option>
                                 <option value="FILAMENT_AVAILABLE">AVAILABLE</option>
-                                <option value="FILAMENT_UNAVAILABLE">UNAVAILABLE</option>
+                                <option value="FILAMENT_UNAVAILABLE">OUT OF STOCK</option>
                             </select>
                         </span>
                     </div>
@@ -63,8 +63,7 @@
                                 </td>
                                 <td>
                                     <a (click)="deleteFilament(filament)" class="delete" data-toggle="modal"
-                                        style="cursor: pointer;"><i class="material-icons" data-toggle="tooltip"
-                                            title="Delete">&#xE872;</i></a>
+                                        style="cursor: pointer;">Delete</a>
                                 </td>
                         </tbody>
                     </table>
