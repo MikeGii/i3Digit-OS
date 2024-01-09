@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static java.time.LocalDateTime.now;
@@ -84,7 +83,7 @@ public class FilamentResource {
 
     @GetMapping(path= "/image/{fileName}", produces = IMAGE_PNG_VALUE)
     public byte[] getFilamentImage(@PathVariable("fileName") String fileName) throws IOException {
-        return Files.readAllBytes(Paths.get(System.getProperty("user.home") + "/Desktop/I3DigitOS/FilamentImages/" + fileName));
+        return Files.readAllBytes(Paths.get("src/main/resources/images/" + fileName));
     }
 
 }
