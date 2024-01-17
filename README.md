@@ -22,9 +22,9 @@ i3Digit OS offers three primary functions which is divided into development phas
 - Use "angular" branch for latest stable version of front-end side of i3Digit OS web application. Instructions are located inside of angular branch readme.md file how to set up front-end side for usage.
 - "...Development" branches are not bugfree versions of web application but have usually some updates compared to stable versions. Development branches are merged into stable branches when are fully tested to be complete and bugfree.
 
-  1. First configure and run Spring Boot back-end service - instructions inside springBoot branch
-  2. Then run Angular front-end service - instructions inside angular branch
-  3. Run the application on your localhost page with port 4200
+1. First configure and run Spring Boot back-end service - instructions inside springBoot branch
+2. Then run Angular front-end service - instructions inside angular branch
+3. Run the application on your localhost page with port 4200
 
 <br>
  
